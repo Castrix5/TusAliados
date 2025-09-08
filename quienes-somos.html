@@ -31,12 +31,143 @@
     </div>
   </header>
 
-  <main>
-    <section class="nosotros">
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="hero" style="padding:2.5rem 1rem;">
+    <div class="hero__content" style="max-width:900px; margin:0 auto; text-align:center;">
       <h1 class="section-title">Quiénes somos</h1>
-      <!-- Aquí irá la historia, misión, visión y equipo -->
-    </section>
-  </main>
+      <p class="hero__subtitle" style="max-width:720px; margin:0.5rem auto 0;">
+        En <strong>TusAliados</strong> conectamos a personas con profesionales confiables —psicología, medicina, nutrición, legal, entrenamiento y más— de forma rápida, segura y transparente.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== HISTORIA / PROPÓSITO ===== -->
+  <section class="nosotros" style="padding:1rem 1rem 0;">
+    <div style="max-width:900px; margin:0 auto;">
+      <h2 class="section-title">Nuestra historia</h2>
+      <p>
+        Nacimos con una pregunta simple: <em>¿por qué es tan difícil encontrar al profesional correcto en el momento correcto?</em>
+        Creamos TusAliados para reducir esa fricción: un lugar donde comparar perfiles, precios y disponibilidad en minutos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== MISIÓN / VISIÓN / VALORES ===== -->
+  <section style="padding:1rem 1rem 0;">
+    <div style="max-width:1000px; margin:0 auto; display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+      <article class="card">
+        <h3 class="card__title">Misión</h3>
+        <p>Acercar a las personas con profesionales confiables mediante una experiencia clara, justa y segura.</p>
+      </article>
+      <article class="card">
+        <h3 class="card__title">Visión</h3>
+        <p>Ser la plataforma de referencia en LATAM para servicios profesionales de bienestar y desarrollo.</p>
+      </article>
+      <article class="card">
+        <h3 class="card__title">Valores</h3>
+        <ul class="plan__features">
+          <li>Transparencia en precios</li>
+          <li>Calidad verificada</li>
+          <li>Privacidad y seguridad</li>
+          <li>Accesibilidad y empatía</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CIFRAS / IMPACTO ===== -->
+  <section style="padding:2rem 1rem 0;">
+    <div style="max-width:1000px; margin:0 auto;">
+      <h2 class="section-title">Nuestro impacto</h2>
+      <div style="display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align:center;">
+        <div class="card">
+          <h3 class="card__title" style="font-size:2rem;">+250</h3>
+          <p>Profesionales verificados</p>
+        </div>
+        <div class="card">
+          <h3 class="card__title" style="font-size:2rem;">+1,200</h3>
+          <p>Sesiones agendadas</p>
+        </div>
+        <div class="card">
+          <h3 class="card__title" style="font-size:2rem;">4.7/5</h3>
+          <p>Calificación promedio</p>
+        </div>
+        <div class="card">
+          <h3 class="card__title" style="font-size:2rem;">24/7</h3>
+          <p>Soporte por correo</p>
+        </div>
+      </div>
+      <small style="display:block; text-align:center; margin-top:.5rem; opacity:.7;">*Cifras ilustrativas para el MVP.</small>
+    </div>
+  </section>
+
+  <!-- ===== EQUIPO ===== -->
+  <section style="padding:2rem 1rem 0;">
+    <div style="max-width:1000px; margin:0 auto;">
+      <h2 class="section-title">Equipo</h2>
+      <div class="team-grid" style="display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <article class="card team-card">
+          <img class="card__img" src="assets/psicologo.jpg" alt="Foto de Daniel" style="height:160px; object-fit:cover;">
+          <h3 class="card__title">Daniel Castro</h3>
+          <p class="card__subtitle">Fundador & Producto</p>
+          <p class="card__desc">Obseso de la experiencia simple y la confianza del usuario.</p>
+        </article>
+        <article class="card team-card">
+          <img class="card__img" src="assets/doctor.jpg" alt="Foto de Brenda" style="height:160px; object-fit:cover;">
+          <h3 class="card__title">Brenda López</h3>
+          <p class="card__subtitle">Operaciones</p>
+          <p class="card__desc">Garantiza calidad, tiempos de respuesta y soporte.</p>
+        </article>
+        <article class="card team-card">
+          <img class="card__img" src="assets/abogado.jpg" alt="Foto de Carlos" style="height:160px; object-fit:cover;">
+          <h3 class="card__title">Carlos Méndez</h3>
+          <p class="card__subtitle">Tecnología</p>
+          <p class="card__desc">Arquitectura segura, performance y escalabilidad.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONFIANZA / SEGURIDAD ===== -->
+  <section style="padding:2rem 1rem 0;">
+    <div style="max-width:900px; margin:0 auto;">
+      <h2 class="section-title">Confianza y seguridad</h2>
+      <ul class="plan__features">
+        <li>Perfiles y credenciales revisados</li>
+        <li>Pagos seguros y políticas claras</li>
+        <li>Protección de datos personales</li>
+        <li>Calificaciones y comentarios visibles</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section style="padding:2rem 1rem 0;">
+    <div style="max-width:900px; margin:0 auto;">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      <details class="card">
+        <summary><strong>¿Cómo elijo al profesional correcto?</strong></summary>
+        <p>Usa filtros por especialidad, modalidad y precio. Revisa su calificación y descripción breve.</p>
+      </details>
+      <details class="card">
+        <summary><strong>¿Las sesiones son online o presenciales?</strong></summary>
+        <p>Ambas. Cada perfil indica su modalidad y disponibilidad.</p>
+      </details>
+      <details class="card">
+        <summary><strong>¿Cómo se manejan los pagos?</strong></summary>
+        <p>Los pagos se procesarán de forma segura. En el MVP los activaremos próximamente.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="videollamadas" style="padding-top:2rem;">
+    <h2 class="section-title">¿Listo para empezar?</h2>
+    <p>Explora profesionales y agenda tu primera sesión.</p>
+    <a href="auth.html?tab=register" class="btn btn--primary">Crear cuenta</a>
+  </section>
+</main>
 
   <footer class="footer" id="contacto">
     <div class="footer__container">

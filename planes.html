@@ -32,10 +32,75 @@
   </header>
 
   <main>
-    <section class="planes">
-      <h1 class="section-title">Planes de Suscripción</h1>
-      <!-- Aquí va la tabla comparativa de planes -->
-    </section>
+<section id="planes" class="planes">
+  <h2 class="section-title">Elige tu Plan</h2>
+  <p style="text-align:center; max-width:640px; margin:0 auto 2rem;">
+    Suscríbete al plan que mejor se adapte a ti. Cambia o cancela en cualquier momento.
+  </p>
+
+  <div class="planes__grid">
+    <!-- Plan 1 -->
+    <div class="plan">
+      <h3 class="plan__title">Explorador</h3>
+      <p class="plan__price">$49 <span style="font-size:.9rem;">/mes</span></p>
+      <ul class="plan__features">
+        <li>Acceso al directorio de profesionales</li>
+        <li>Guías y recursos básicos</li>
+        <li>Sin compromiso a largo plazo</li>
+        <li class="plan__not-included">No incluye sesiones</li>
+        <li class="plan__not-included">Sin contenido exclusivo</li>
+      </ul>
+      <a href="auth.html?tab=register" class="btn btn--secondary">Empieza ahora</a>
+    </div>
+
+    <!-- Plan 2 -->
+    <div class="plan">
+      <h3 class="plan__title">Esencial</h3>
+      <p class="plan__price">$299 <span style="font-size:.9rem;">/mes</span></p>
+      <ul class="plan__features">
+        <li>1 sesión con profesional</li>
+        <li>Acceso al directorio completo</li>
+        <li>Guías y recursos avanzados</li>
+        <li>Elige la especialidad que quieras</li>
+        <li class="plan__not-included">Sin contenido exclusivo</li>
+      </ul>
+      <a href="auth.html?tab=register" class="btn btn--primary">Elegir Esencial</a>
+    </div>
+
+    <!-- Plan 3 (destacado) -->
+    <div class="plan plan--highlighted">
+      <div class="plan__badge">Más popular</div>
+      <h3 class="plan__title">Aliado 3X</h3>
+      <p class="plan__price">$599 <span style="font-size:.9rem;">/mes</span></p>
+      <ul class="plan__features">
+        <li>3 sesiones con profesionales</li>
+        <li>Paga 2, recibe 3</li>
+        <li>Acceso al directorio completo</li>
+        <li>Contenido exclusivo</li>
+        <li>Combina diferentes especialidades</li>
+      </ul>
+      <a href="auth.html?tab=register" class="btn btn--primary">Elegir Aliado 3X</a>
+    </div>
+
+    <!-- Plan 4 -->
+    <div class="plan">
+      <h3 class="plan__title">Premium</h3>
+      <p class="plan__price">$949 <span style="font-size:.9rem;">/mes</span></p>
+      <ul class="plan__features">
+        <li>5 sesiones con profesionales</li>
+        <li>Seguimiento personalizado</li>
+        <li>Todas las guías y recursos</li>
+        <li>Cápsulas y cursos exclusivos</li>
+        <li>Prioridad en la agenda</li>
+      </ul>
+      <a href="auth.html?tab=register" class="btn btn--secondary">Quiero Premium</a>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:2rem;">
+    <a href="auth.html?tab=register" class="btn btn--primary btn--cta">Regístrate y elige tu plan</a>
+  </div>
+</section>
   </main>
 
   <footer class="footer" id="contacto">

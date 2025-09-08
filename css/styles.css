@@ -351,6 +351,38 @@ body {
 }
 
 
+/* Destacar el plan más popular */
+.plan--highlighted {
+  border: 2px solid var(--color-primary);
+  position: relative;
+  background: linear-gradient(135deg, var(--color-light) 0%, #fff 100%);
+  transform: scale(1.05);
+}
+
+.plan__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/*========== QUIENES SOMOS =========*/
+
+/* Acordeones FAQ */
+details.card { padding: 1rem; cursor: pointer; }
+details.card + details.card { margin-top: .5rem; }
+
+/* Cards del equipo: un poco más de aire */
+.team-card .card__title { margin-top: .5rem; }
+.team-card .card__subtitle { opacity: .8; margin-bottom: .25rem; }
+
 /* ===== VIDEOLLAMADAS ===== */
 .videollamadas {
     text-align: center;

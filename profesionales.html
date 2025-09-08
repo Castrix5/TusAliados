@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Profesionales - TusAliados</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- ===== HEADER ===== -->
   <header class="header" role="banner">
     <div class="header__container">
       <a href="index.html" class="header__brand" aria-label="Ir al inicio">
-        <img src="assets/logo.svg" alt="Tus Aliados" class="header__logo">
+        <img src="assets/logo.svg" alt="TusAliados" class="header__logo" />
       </a>
 
       <button class="nav__toggle" aria-label="Abrir menú" aria-controls="primary-nav" aria-expanded="false">
@@ -26,18 +27,172 @@
           <li><a href="planes.html" class="nav__link">Planes</a></li>
           <li><a href="quienes-somos.html" class="nav__link">Quiénes somos</a></li>
         </ul>
-        <a href="auth.html" class="btn btn--cta">Regístrate</a>
+        <a href="auth.html?tab=register" class="btn btn--cta">Regístrate</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="profesionales">
-      <h1 class="section-title">Nuestros Profesionales</h1>
-      <!-- Aquí irá el grid con los especialistas -->
+    <!-- ===== HERO / BUSCADOR ===== -->
+    <section class="hero" style="padding-top:2.5rem; padding-bottom:2rem;">
+      <div class="hero__content" style="max-width:960px; margin:0 auto;">
+        <h1 class="section-title" style="margin-bottom:0.5rem;">Encuentra a tu aliado ideal</h1>
+        <p class="hero__subtitle" style="max-width:680px; margin:0 auto 1rem;">
+          Filtra por especialidad, modalidad y ordena por precio o calificación. Este listado es de ejemplo para el MVP.
+        </p>
+
+        <form id="filtersForm" class="profesionales-search" style="display:grid; gap:0.75rem; grid-template-columns: 1fr 180px 160px 160px; align-items:center; padding:0 1rem;">
+          <input id="q" type="text" placeholder="Buscar por nombre o especialidad..." aria-label="Buscar" style="padding:0.6rem 0.8rem; border:1px solid #ddd; border-radius:8px;" />
+          <select id="category" aria-label="Categoría" style="padding:0.6rem 0.8rem; border:1px solid #ddd; border-radius:8px;">
+            <option value="">Todas las categorías</option>
+            <option value="psicologia">Psicología</option>
+            <option value="medicina">Medicina</option>
+            <option value="abogacia">Abogacía</option>
+            <option value="nutricion">Nutrición</option>
+            <option value="entrenamiento">Entrenamiento</option>
+            <option value="contabilidad">Contabilidad</option>
+          </select>
+          <select id="modality" aria-label="Modalidad" style="padding:0.6rem 0.8rem; border:1px solid #ddd; border-radius:8px;">
+            <option value="">Modalidad</option>
+            <option value="online">Online</option>
+            <option value="presencial">Presencial</option>
+          </select>
+          <select id="sort" aria-label="Ordenar por" style="padding:0.6rem 0.8rem; border:1px solid #ddd; border-radius:8px;">
+            <option value="relevance">Ordenar: Relevancia</option>
+            <option value="price_asc">Precio: menor a mayor</option>
+            <option value="price_desc">Precio: mayor a menor</option>
+            <option value="rating_desc">Mejor calificados</option>
+          </select>
+        </form>
+
+        <div style="max-width:960px; margin:0.75rem auto 0; padding:0 1rem; display:flex; justify-content:space-between; align-items:center;">
+          <small id="resultsCounter"></small>
+          <button id="resetFilters" class="btn btn--secondary">Limpiar filtros</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LISTADO ===== -->
+    <section class="profesionales" style="padding-top:1rem;">
+      <h2 class="section-title">Profesionales disponibles</h2>
+
+      <div id="cardsGrid" class="profesionales__grid">
+        <!-- Tarjeta 1 -->
+        <article class="card"
+          data-name="Ana Pérez"
+          data-category="psicologia"
+          data-modality="online"
+          data-rating="4.8"
+          data-price="550">
+          <img src="assets/psicologo.jpg" alt="Psicóloga" class="card__img">
+          <h3 class="card__title">Dra. Ana Pérez</h3>
+          <p class="card__subtitle">Psicóloga clínica • TCC • 8 años</p>
+          <p class="card__desc">Apoyo en ansiedad, estrés, hábitos y crecimiento personal.</p>
+          <p class="card__meta">⭐ 4.8 · $550 MXN / 30 min · Online</p>
+          <a href="auth.html?tab=login" class="btn btn--secondary" style="margin-top:.5rem;">Agendar</a>
+        </article>
+
+        <!-- Tarjeta 2 -->
+        <article class="card"
+          data-name="Carlos López"
+          data-category="medicina"
+          data-modality="presencial"
+          data-rating="4.6"
+          data-price="700">
+          <img src="assets/doctor.jpg" alt="Médico general" class="card__img">
+          <h3 class="card__title">Dr. Carlos López</h3>
+          <p class="card__subtitle">Médico general • 10 años</p>
+          <p class="card__desc">Chequeos, orientación y primeras valoraciones.</p>
+          <p class="card__meta">⭐ 4.6 · $700 MXN / 30 min · Presencial</p>
+          <a href="auth.html?tab=login" class="btn btn--secondary" style="margin-top:.5rem;">Agendar</a>
+        </article>
+
+        <!-- Tarjeta 3 -->
+        <article class="card"
+          data-name="María García"
+          data-category="abogacia"
+          data-modality="online"
+          data-rating="4.7"
+          data-price="800">
+          <img src="assets/abogado.jpg" alt="Abogada" class="card__img">
+          <h3 class="card__title">Lic. María García</h3>
+          <p class="card__subtitle">Abogada civil y familiar • 6 años</p>
+          <p class="card__desc">Consultas civiles, contratos básicos y orientación legal.</p>
+          <p class="card__meta">⭐ 4.7 · $800 MXN / 30 min · Online</p>
+          <a href="auth.html?tab=login" class="btn btn--secondary" style="margin-top:.5rem;">Agendar</a>
+        </article>
+
+        <!-- Tarjeta 4 -->
+        <article class="card"
+          data-name="Luis Hernández"
+          data-category="entrenamiento"
+          data-modality="online"
+          data-rating="4.4"
+          data-price="400">
+          <img src="assets/entrenador.jpg" alt="Entrenador personal" class="card__img">
+          <h3 class="card__title">Coach Luis Hernández</h3>
+          <p class="card__subtitle">Entrenador personal • 5 años</p>
+          <p class="card__desc">Planes de ejercicio en casa, fuerza y acondicionamiento.</p>
+          <p class="card__meta">⭐ 4.4 · $400 MXN / 30 min · Online</p>
+          <a href="auth.html?tab=login" class="btn btn--secondary" style="margin-top:.5rem;">Agendar</a>
+        </article>
+
+        <!-- Tarjeta 5 -->
+        <article class="card"
+          data-name="Sofía Torres"
+          data-category="nutricion"
+          data-modality="online"
+          data-rating="4.9"
+          data-price="600">
+          <img src="assets/nutriologo.jpg" alt="Nutrióloga" class="card__img">
+          <h3 class="card__title">Mtra. Sofía Torres</h3>
+          <p class="card__subtitle">Nutrióloga clínica • 7 años</p>
+          <p class="card__desc">Planes alimenticios personalizados y educación nutricional.</p>
+          <p class="card__meta">⭐ 4.9 · $600 MXN / 30 min · Online</p>
+          <a href="auth.html?tab=login" class="btn btn--secondary" style="margin-top:.5rem;">Agendar</a>
+        </article>
+
+        <!-- Tarjeta 6 -->
+        <article class="card"
+          data-name="Jorge Ramírez"
+          data-category="contabilidad"
+          data-modality="presencial"
+          data-rating="4.2"
+          data-price="500">
+          <img src="assets/contador.jpg" alt="Contador" class="card__img">
+          <h3 class="card__title">C.P. Jorge Ramírez</h3>
+          <p class="card__subtitle">Contador público • 12 años</p>
+          <p class="card__desc">Impuestos básicos, facturación y orientación para PYMES.</p>
+          <p class="card__meta">⭐ 4.2 · $500 MXN / 30 min · Presencial</p>
+          <a href="auth.html?tab=login" class="btn btn--secondary" style="margin-top:.5rem;">Agendar</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CÓMO FUNCIONA ===== -->
+    <section class="videollamadas">
+      <h2 class="section-title">¿Cómo funciona?</h2>
+      <div style="max-width:900px; margin:0 auto; display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <div class="card">
+          <h3 class="card__title">1. Busca</h3>
+          <p>Usa el buscador y los filtros para encontrar profesionales por especialidad o modalidad.</p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">2. Elige</h3>
+          <p>Compara experiencia, precio y calificación. Revisa su disponibilidad.</p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">3. Agenda</h3>
+          <p>Reserva tu cita. Si ya tienes cuenta, te llevamos directo al calendario.</p>
+        </div>
+      </div>
+      <div style="margin-top:1rem;">
+        <a href="auth.html?tab=register" class="btn btn--primary">Crear cuenta</a>
+      </div>
     </section>
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="footer" id="contacto">
     <div class="footer__container">
       <div class="footer__col">
@@ -60,5 +215,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/profesionales.js"></script>
 </body>
 </html>
