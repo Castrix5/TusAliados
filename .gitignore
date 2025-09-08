@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+
+# Builds
+dist/
+build/
+
+# Env
+.env
+*.env

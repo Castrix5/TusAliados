@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TusAliados - Profesionales a tu alcance</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<main>
+    <!-- ===== HEADER ===== -->
+    <header class="header" role="banner">
+  <div class="header__container">
+    <a href="/" class="header__brand" aria-label="Ir al inicio">
+      <img src="assets/logo.svg" alt="" class="header__logo" />
+      <span class="sr-only">Tus Aliados</span>
+    </a>
+
+    <!-- Botón hamburguesa accesible -->
+    <button class="nav__toggle"
+            aria-label="Abrir menú"
+            aria-controls="primary-nav"
+            aria-expanded="false">
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+    </button>
+
+    <nav id="primary-nav" class="nav" aria-label="Navegación principal">
+  <ul class="nav__list">
+    <li><a href="index.html" class="nav__link" aria-current="page">Inicio</a></li>
+    <li><a href="profesionales.html" class="nav__link">Profesionales</a></li>
+    <li><a href="planes.html" class="nav__link">Planes</a></li>
+    <li><a href="quienes-somos.html" class="nav__link">Quiénes somos</a></li>
+  </ul>
+  <a href="auth.html" class="btn btn--cta">Regístrate</a>
+</nav>
+  </div>
+</header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Encuentra al profesional que necesitas, cuando lo necesites</h1>
+            <p class="hero__subtitle">Médicos, psicólogos, abogados y más, listos para atenderte por videollamada o presencial.</p>
+            <a href="#profesionales" class="btn btn--primary">Explorar profesionales</a>
+        </div>
+    </section>
+
+    <!-- ===== PROFESIONALES ===== -->
+    <section id="profesionales" class="profesionales">
+        <h2 class="section-title">Nuestros Profesionales</h2>
+        <div class="profesionales__grid">
+            <div class="card">
+                <img src="assets/psicologo.jpg" alt="Psicólogo" class="card__img">
+                <h3 class="card__title">Psicólogos</h3>
+            </div>
+            <div class="card">
+                <img src="assets/abogado.jpg" alt="Abogado" class="card__img">
+                <h3 class="card__title">Abogados</h3>
+            </div>
+            <div class="card">
+                <img src="assets/nutriologo.jpg" alt="Nutricionista" class="card__img">
+                <h3 class="card__title">Nutriólogos</h3>
+            </div>
+            <div class="card">
+                <img src="assets/entrenador.jpg" alt="Entrenador personal" class="card__img">
+                <h3 class="card__title">Asesores financiero</h3>
+            </div>
+            <div class="card">
+                <img src="assets/maestroingles.jpg" alt="Maestro inglés" class="card__img">
+                <h3 class="card__title">Maestros Inglés</h3>
+            </div>
+            <div class="card">
+                <img src="assets/contador.jpg" alt="Contador" class="card__img">
+                <h3 class="card__title">Contadores</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PLANES ===== -->
+    <section id="planes" class="planes">
+        <h2 class="section-title">Planes de Suscripción</h2>
+        <div class="planes__grid">
+            <div class="plan">
+                <h3 class="plan__title">Explorador</h3>
+                <p class="plan__price">$49/mes</p>
+                <ul class="plan__features">
+                    <li>Acceso al directorio de profesionales</li>
+                    <li>Guías y recursos basicos</li>
+                    <li>Sin compromiso a largo plazo</li>
+                    <li class="plan__not-included">No incluye sesiones</li>
+                    <li class="plan__not-included">Sin contenido exclusivo</li>
+                </ul>
+                <a href="#" class="btn btn--secondary">Plan Básico</a>
+            </div>
+            <div class="plan">
+                <h3 class="plan__title">Esencial</h3>
+                <p class="plan__price">$299/mes</p>
+                <ul class="plan__features">
+                    <li>1 sesión</li>
+                    <li>Acceso al directorio completo</li>
+                    <li>Guías y recursos avanzados</li>
+                    <li>Elección libre de especialidad</li>
+                    <li class="plan__not-included">Sin contenido exclusivo</li>
+                </ul>
+                <a href="#" class="btn btn--primary">Plan Inicial</a>
+            </div>
+            <div class="plan">
+                <h3 class="plan__title">Aliado 3X</h3>
+                <p class="plan__price">$599/mes</p>
+                <ul class="plan__features">
+                    <li>3 sesiones con profesionales</li>
+                    <li>Paga 2, recibe 3 sesiones</li>
+                    <li>Acceso al directorio completo</li>
+                    <li>Contenido exclusivo</li>
+                    <li>Combina diferentes especialidades</li>
+                </ul>
+                <a href="#" class="btn btn--secondary">Recomendado</a>
+            </div>
+            <div class="plan">
+                <h3 class="plan__title">Premium</h3>
+                <p class="plan__price">$949/mes</p>
+                <ul class="plan__features">
+                    <li>5 sesiones con profesionales</li>
+                    <li>Seguimiento personalizado</li>
+                    <li>Todas las guías y recursos</li>
+                    <li>Cápsulas y cursos exclusivos</li>
+                    <li>Prioridad en la agenda</li>
+                </ul>
+                <a href="#" class="btn btn--secondary">Plan completo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VIDEOLLAMADAS ===== -->
+    <section id="videollamadas" class="videollamadas">
+        <h2 class="section-title">Consultas por Videollamada</h2>
+        <p class="videollamadas__text">Conéctate con nuestros profesionales desde cualquier lugar, con calidad de imagen y seguridad en tus datos.</p>
+        <img src="videollamada.jpg" alt="Videollamada" class="videollamadas__img">
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="contacto">
+        <div class="footer__container">
+            <div class="footer__col">
+                <img src="assets/logo_blanco.svg" alt="Logo TusAliados" class="footer__logo">
+                <p>Conecta con los mejores profesionales desde cualquier lugar.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Redes Sociales</h4>
+                <p>@TusAliados</p>
+            </div>
+        </div>
+    </footer>
+</main>
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TusAliados — Acceso</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<main>
+  <!-- ===== HEADER (igual a tu estilo) ===== -->
+  <header class="header" role="banner">
+    <div class="header__container">
+      <a href="index.html" class="header__brand" aria-label="Ir al inicio">
+        <img src="assets/logo.svg" alt="" class="header__logo" />
+        <span class="sr-only">Tus Aliados</span>
+      </a>
+
+      <!-- Botón hamburguesa accesible -->
+      <button class="nav__toggle"
+              aria-label="Abrir menú"
+              aria-controls="primary-nav"
+              aria-expanded="false">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Inicio</a></li>
+          <li><a href="profesionales.html" class="nav__link">Profesionales</a></li>
+          <li><a href="planes.html" class="nav__link">Planes</a></li>
+          <li><a href="quienes-somos.html" class="nav__link">Quiénes somos</a></li>
+        </ul>
+        <!-- Enlaza al registro por defecto -->
+        <a href="auth.html?tab=register" class="btn btn--cta">Regístrate</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== AUTH ===== -->
+  <section class="auth">
+    <div class="auth__container" role="region" aria-labelledby="auth-title">
+      <h1 id="auth-title" class="section-title">Accede a TusAliados</h1>
+
+      <!-- Tabs -->
+      <div role="tablist" aria-label="Autenticación" style="display:flex; gap:.5rem; margin-bottom:1rem;">
+        <button id="tab-login" role="tab" aria-selected="true" aria-controls="panel-login" class="btn btn--secondary">Iniciar sesión</button>
+        <button id="tab-register" role="tab" aria-selected="false" aria-controls="panel-register" class="btn btn--primary">Crear cuenta</button>
+      </div>
+
+      <!-- Panel: Login -->
+      <section id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+        <form id="formLogin" class="auth__form" novalidate>
+          <div class="form__group">
+            <label for="login-email">Correo electrónico</label>
+            <input id="login-email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required />
+          </div>
+
+          <div class="form__group">
+            <label for="login-password">Contraseña</label>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required minlength="6" />
+          </div>
+
+          <p id="login-error" class="form-error" aria-live="polite"></p>
+          <p id="login-success" class="form-success" aria-live="polite"></p>
+
+          <button type="submit" class="btn btn--primary" style="width:100%;">Entrar</button>
+          <div class="auth__footer">
+            <a href="#" id="link-forgot">¿Olvidaste tu contraseña?</a>
+          </div>
+        </form>
+      </section>
+
+      <!-- Panel: Registro -->
+      <section id="panel-register" role="tabpanel" aria-labelledby="tab-register" hidden>
+        <form id="formRegister" class="auth__form" novalidate>
+          <div class="form__group">
+            <label for="reg-name">Nombre completo</label>
+            <input id="reg-name" name="full_name" type="text" autocomplete="name" placeholder="Daniel Castro" required />
+          </div>
+
+          <div class="form__group">
+            <label for="reg-email">Correo electrónico</label>
+            <input id="reg-email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required />
+          </div>
+
+          <div class="form__group">
+            <label for="reg-password">Contraseña</label>
+            <input id="reg-password" name="password" type="password" autocomplete="new-password" placeholder="Mínimo 6 caracteres" required minlength="6" />
+          </div>
+
+          <div class="form__group">
+            <label for="reg-role">Rol</label>
+            <select id="reg-role" name="role" required>
+              <option value="CLIENT">Cliente</option>
+              <option value="PRO">Profesional</option>
+            </select>
+          </div>
+
+          <p id="register-error" class="form-error" aria-live="polite"></p>
+          <p id="register-success" class="form-success" aria-live="polite"></p>
+
+          <button type="submit" class="btn btn--primary" style="width:100%;">Crear cuenta</button>
+        </form>
+      </section>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__col">
+        <img src="assets/logo_blanco.svg" alt="Logo TusAliados" class="footer__logo">
+        <p>Conecta con los mejores profesionales desde cualquier lugar.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</main>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
